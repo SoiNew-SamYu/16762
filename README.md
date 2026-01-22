@@ -26,4 +26,7 @@ git clone https://github.com/SoiNew-SamYu/16762.git
 
 To Run Rviz
 ```bash
+ros2 launch stretch_core stretch_driver.launch.py
+ros2 run rviz2 rviz2 -d `ros2 pkg prefix --share stretch_calibration`/rviz/stretch_simple_test.rviz
 
+```
