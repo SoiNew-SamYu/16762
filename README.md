@@ -22,3 +22,8 @@ pip3 install hello-robot-stretch-body
 pip3 install numpy==1.26.4 opencv-contrib-python==4.10.0.84 opencv-python==4.11.0.86
 
 git clone https://github.com/SoiNew-SamYu/16762.git
+```
+
+To Run Rviz
+```bash
+
