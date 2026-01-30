@@ -1,7 +1,7 @@
 import hello_helpers.hello_misc as hm
 import math
 import numpy as np
-
+import rclpy
 class MyNode(hm.HelloNode):
     def __init__(self):
         hm.HelloNode.__init__(self)
@@ -10,7 +10,7 @@ class MyNode(hm.HelloNode):
         hm.HelloNode.main(self, 'my_node', 'my_node', wait_for_first_pointcloud=False)
 
         self.stow_the_robot()   
-        self.move_to_pose({'joint_arm': 0.52},{'joint_lift': 1.1})
+        self.move_to_pose({'joint_arm': 0.52,'joint_lift': 1.1},blocking=True)
         self.move_to_pose({'joint_wrist_yaw': -1.0}, blocking=True)
         self.move_to_pose({'joint_wrist_pitch': -1.0}, blocking=True)
         self.move_to_pose({'joint_wrist_roll': -1.0}, blocking=True)
@@ -21,8 +21,8 @@ class MyNode(hm.HelloNode):
         self.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
         self.move_to_pose({'rotate_mobile_base': np.deg2rad(180)}, blocking=True)
         self.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
-        self.destory_node()
-
-if __name__ == 'main':
+        self.destroy_node()
+        rclpy.shutdown()
+if __name__ == '__main__':
     node = MyNode()
     node.main()
