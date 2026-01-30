@@ -23,22 +23,22 @@ class MyNode(hm.HelloNode):
         self.move_to_pose({'joint_wrist_yaw': -1.0}, blocking=True)
         self.move_to_pose({'joint_wrist_pitch': -1.0}, blocking=True)
         self.move_to_pose({'joint_wrist_roll': -1.0}, blocking=True)
-        self.move_to_pose({'gripper_aperture': 0.05}, blocking=True)
-        self.move_to_pose({'gripper_aperture': 0.0}, blocking=True)
-        self.move_to_pose({'joint_head_pan': 0.0, 'joint_head_tilt': -0.3}, blocking=True)
-        self.move_to_pose({
-    'lift': 0.3,
-    'arm': 0.0,
-    'wrist_yaw': 0.0,
-    'wrist_pitch': 0.0,
-    'wrist_roll': 0.0,
-    'joint_head_pan': 0.0,
-    'joint_head_tilt': -0.8,
-    'gripper_aperture': 0.0
-                                }, blocking=True)
-        self.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
-        self.move_to_pose({'rotate_mobile_base': np.deg2rad(180)}, blocking=True)
-        self.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
+    #     self.move_to_pose({'gripper_aperture': 0.05}, blocking=True)
+    #     self.move_to_pose({'gripper_aperture': 0.0}, blocking=True)
+    #     self.move_to_pose({'joint_head_pan': 0.0, 'joint_head_tilt': -0.3}, blocking=True)
+    #     self.move_to_pose({
+    # 'lift': 0.3,
+    # 'arm': 0.0,
+    # 'wrist_yaw': 0.0,
+    # 'wrist_pitch': 0.0,
+    # 'wrist_roll': 0.0,
+    # 'joint_head_pan': 0.0,
+    # 'joint_head_tilt': -0.8,
+    # 'gripper_aperture': 0.0
+    #                             }, blocking=True)
+    #     self.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
+    #     self.move_to_pose({'rotate_mobile_base': np.deg2rad(180)}, blocking=True)
+    #     self.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
 
 node = MyNode()
 node.main()
